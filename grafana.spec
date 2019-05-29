@@ -72,6 +72,8 @@ popd
 install -d %{buildroot}%{_sharedstatedir}/%{name}/plugins
 install -d %{buildroot}%{_logdir}/%{name}/
 
+rm -rf %{buildroot}/%{_datadir}/%{name}/scripts/build/release_publisher/testdata/
+
 echo "d %{_rundir}/%{name} 0755 %{GRAFANA_USER} %{GRAFANA_GROUP} -" \
     > %{buildroot}%{_tmpfilesdir}/%{name}.conf
 
