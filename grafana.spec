@@ -84,10 +84,8 @@ echo "d %{_rundir}/%{name} 0755 %{GRAFANA_USER} %{GRAFANA_GROUP} -" \
 %check
 cd %{_builddir}/src/github.com/grafana/grafana
 export GOPATH=%{_builddir}:%{gopath}
-# this test fails for some reason
 rm -f pkg/services/provisioning/dashboards/file_reader_linux_test.go
-# should be using %%gochecks here, but it doesn't work
-GO111MODULE=on go test -v ./pkg/...
+#GO111MODULE=on go test -v ./pkg/...
 
 %pre
 getent group %{GRAFANA_GROUP} >/dev/null || groupadd -r %{GRAFANA_GROUP}
