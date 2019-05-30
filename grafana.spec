@@ -13,6 +13,7 @@ Source0:	https://github.com/grafana/grafana/archive/v%{version}.tar.gz
 BuildRequires:	golang
 BuildRequires:	nodejs
 BuildRequires:  %{?go_compiler:compiler(go-compiler)}%{!?go_compiler:golang}
+Requires:	prometheus
 
 %description
 Grafana is an open source, feature rich metrics dashboard and graph editor
