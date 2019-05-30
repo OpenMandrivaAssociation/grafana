@@ -12,6 +12,7 @@ URL:		https://grafana.com
 Source0:	https://github.com/grafana/grafana/archive/v%{version}.tar.gz
 BuildRequires:	golang
 BuildRequires:	nodejs
+BuildRequires:  %{?go_compiler:compiler(go-compiler)}%{!?go_compiler:golang}
 
 %description
 Grafana is an open source, feature rich metrics dashboard and graph editor
@@ -23,7 +24,6 @@ mkdir -p ../src/github.com/grafana/grafana
 mv $(ls | grep -v "^src$") ../src/github.com/grafana/grafana/.
 
 %build
-%define gobuild(o:) go build -ldflags "${LDFLAGS:-} -B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \\n')" -a -v -x %{?**};
 pushd ../src/github.com/grafana/grafana
 #go get golang.org/x/sync/errgroup
 #GOPATH="${PWD}:%{gopath}" make deps-go
