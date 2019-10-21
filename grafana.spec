@@ -3,7 +3,7 @@
 %global           GRAFANA_HOME %{_datadir}/%{name}
 
 Name:		grafana
-Version:	6.4.1
+Version:	6.4.3
 Release:	1
 Summary:	Metrics dashboard and graph editor
 Group:		Development/Other
