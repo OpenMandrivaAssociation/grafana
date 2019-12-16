@@ -3,8 +3,8 @@
 %global           GRAFANA_HOME %{_datadir}/%{name}
 
 Name:		grafana
-Version:	6.5.1
-Release:	2
+Version:	6.5.2
+Release:	1
 Summary:	Metrics dashboard and graph editor
 Group:		Development/Other
 License:	ASL 2.0
