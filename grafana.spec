@@ -4,7 +4,7 @@
 
 Name:		grafana
 Version:	6.5.3
-Release:	1
+Release:	2
 Summary:	Metrics dashboard and graph editor
 Group:		Development/Other
 License:	ASL 2.0
